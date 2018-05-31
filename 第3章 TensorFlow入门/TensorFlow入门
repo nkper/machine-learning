@@ -1,0 +1,16 @@
+3.1 TensorFlow计算模型——计算图
+    TensorFlow
+        Tensor——表明 数据结构
+        Flow——体现了 计算模型
+    TensorFlow程序一般可以分为两个阶段
+        阶段一：定义计算图中所有的计算
+        阶段二：执行计算
+        样例
+            import tensorflow as tf
+            a = tf.constant([1.0,2.0], name="a")
+            b = tf.constant([2.0,3.0], name="b")
+            result = a + b
+            #以上为 阶段一
+            with tf.Session() as sess:
+                print(sess.run(result))
+            #以上为 阶段二
